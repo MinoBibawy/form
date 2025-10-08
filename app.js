@@ -299,6 +299,12 @@
     { cat:'occhio', text:'أراقب لأفهم سبب حدوث التأخيرات.' },
   ];
 
+  const ANSWER_BANK_AR = ANSWERS_AR.reduce((acc, item) => {
+    if(!acc[item.cat]) acc[item.cat] = [];
+    acc[item.cat].push(item.text);
+    return acc;
+  }, { mano: [], bocca: [], orecchio: [], piede: [], cuore: [], occhio: [] });
+
   const RESULT_CONTENT_AR = {
     bocca: `
       <h2>🗣️ الفم - المتحدث والمُشجِّع</h2>
@@ -403,7 +409,7 @@
   function t(key){ return (CURRENT_LANG === 'ar' ? UI_AR : UI_IT)[key] || ''; }
   function getCategories(){ return CURRENT_LANG === 'ar' ? CATEGORIES_AR : CATEGORIES; }
   function getQuestions(){ return CURRENT_LANG === 'ar' ? QUESTIONS_AR_EMOJI : QUESTIONS_IT_EMOJI; }
-  function getAnswers(){ return CURRENT_LANG === 'ar' ? ANSWERS_AR : ANSWERS; }
+  function getAnswerBank(){ return CURRENT_LANG === 'ar' ? ANSWER_BANK_AR : ANSWER_BANK; }
   function getResultContent(){ return CURRENT_LANG === 'ar' ? RESULT_CONTENT_AR : RESULT_CONTENT; }
   function applyStaticTexts(){
     const titleEl = document.getElementById('title');
@@ -446,79 +452,80 @@
     attachHandlers();
   }
 
-  const ANSWERS = [
-    // MANO
-    { cat:"mano", text:"Penso a come è stato organizzato l’evento e mi offro di aiutare." },
-    { cat:"mano", text:"Penso a chi avrà bisogno di aiuto dopo la preghiera." },
-    { cat:"mano", text:"Team acquisti." },
-    { cat:"mano", text:"Tecnico o media." },
-    { cat:"mano", text:"Squadra montaggio/smontaggio e pulizie." },
-    { cat:"mano", text:"Risolviamolo subito." },
-    { cat:"mano", text:"Aiuterò con cucina o pulizie — qualunque cosa serva." },
-    { cat:"mano", text:"Porto del cibo o mi offro per commissioni." },
-    { cat:"mano", text:"Aiutare a sistemare le sedie o l’impianto audio." },
-    { cat:"mano", text:"Organizzare la logistica e assicurarmi che tutto fili liscio." },
-    { cat:"mano", text:"Aiutare praticamente ad accelerare le cose." },
-
-    // BOCCA
-    { cat:"bocca", text:"Avvio una conversazione calda e sicura." },
-    { cat:"bocca", text:"Condivido la mia storia per aiutarlo/a a immedesimarsi." },
-    { cat:"bocca", text:"Lo/la incoraggio con la Scrittura o con un consiglio." },
-    { cat:"bocca", text:"Prego con coraggio e guido la preghiera." },
-    { cat:"bocca", text:"Accoglienza/ospitalità." },
-    { cat:"bocca", text:"Insegnare, guidare o parlare." },
-    { cat:"bocca", text:"Insegniamo o diciamo la verità per aiutare." },
-    { cat:"bocca", text:"Voglio guidare lo studio biblico." },
-    { cat:"bocca", text:"Mando un vocale o un messaggio di incoraggiamento." },
-    { cat:"bocca", text:"Assicurarti che i nuovi arrivati si sentano i benvenuti." },
-    { cat:"bocca", text:"Prepararti a parlare, cantare o guidare." },
-    { cat:"bocca", text:"Tenere un discorso motivazionale prima di iniziare." },
-    { cat:"bocca", text:"Offrire una conclusione gioiosa o saggia." },
-
-    // ORECCHIO
-    { cat:"orecchio", text:"Mi siedo con lui/lei in silenzio e ascolto." },
-    { cat:"orecchio", text:"Semplicemente ascolto e lo/la lascio elaborare." },
-    { cat:"orecchio", text:"Ascolto e prego in silenzio." },
-    { cat:"orecchio", text:"Sentiamo come si sentono le persone al riguardo." },
-    { cat:"orecchio", text:"Ascolterò chi ha bisogno di parlare durante le pause." },
-    { cat:"orecchio", text:"Lo/la chiamo o vado a trovarlo/a solo per ascoltare." },
-    { cat:"orecchio", text:"Sederti in fondo e osservare dove le persone hanno bisogno di aiuto." },
-    { cat:"orecchio", text:"Connettermi uno-a-uno con i timidi o i feriti." },
-    { cat:"orecchio", text:"Restare a parlare con chi ne ha bisogno." },
-
-    // PIEDE
-    { cat:"piede", text:"Lo/la presento agli altri e lo/la includo." },
-    { cat:"piede", text:"Lo/la aiuto a fare un piano o a passare all’azione." },
-    { cat:"piede", text:"Faccio una metania ogni volta che posso." },
-    { cat:"piede", text:"Andiamo a fare qualcosa al riguardo." },
-    { cat:"piede", text:"Vado a invitare chi non pensava di venire." },
-    { cat:"piede", text:"Raduno altri per andare a trovarlo/a o aiutarlo/a." },
-    { cat:"piede", text:"Uscire a salutare i ritardatari o invitare i passanti." },
-    { cat:"piede", text:"Guidare l’uscita/evangelizzazione o andare a parlare con le persone." },
-    { cat:"piede", text:"Passare a controllare gli altri team e offrire aiuto." },
-
-    // CUORE
-    { cat:"cuore", text:"Prego per lui/lei in silenzio da lontano." },
-    { cat:"cuore", text:"Prego con lui/lei subito." },
-    { cat:"cuore", text:"Mi emoziono o mi sento profondamente connesso/a ai bisogni degli altri." },
-    { cat:"cuore", text:"Preghiera." },
-    { cat:"cuore", text:"Preghiamo prima." },
-    { cat:"cuore", text:"Pregherò in silenzio per tutti durante il ritiro." },
-    { cat:"cuore", text:"Prego subito per la sua guarigione." },
-    { cat:"cuore", text:"Trovare un angolo tranquillo per pregare per chi partecipa." },
-    { cat:"cuore", text:"Pregare perché la presenza di Dio riempia la giornata." },
-    { cat:"cuore", text:"Pregare in silenzio per pace e pazienza." },
-
-    // OCCHIO
-    { cat:"occhio", text:"Osservo da lontano e percepisco che c’è qualcosa di più profondo." },
-    { cat:"occhio", text:"Colgo i suoi sentimenti senza molte parole." },
-    { cat:"occhio", text:"Resto spiritualmente vigile su ciò che sta accadendo." },
-    { cat:"occhio", text:"Capiremo cosa sta davvero succedendo." },
-    { cat:"occhio", text:"Resto in fondo a osservare cosa sta accadendo." },
-    { cat:"occhio", text:"Osservo in silenzio per capire quali bisogni pratici ha davvero." },
-    { cat:"occhio", text:"Discernere di cosa hanno bisogno le persone anche se non lo dicono." },
-    { cat:"occhio", text:"Osservare per capire perché si verificano i ritardi." },
-  ];
+  const ANSWER_BANK = {
+    mano: [
+      "Penso a come è stato organizzato l'evento e mi offro di aiutare.",
+      "Penso a chi avrà bisogno di aiuto dopo la preghiera.",
+      "Team acquisti.",
+      "Tecnico o media.",
+      "Squadra montaggio/smontaggio e pulizie.",
+      "Risolviamolo subito.",
+      "Aiuterò con cucina o pulizie - qualunque cosa serva.",
+      "Porto del cibo o mi offro per commissioni.",
+      "Aiutare a sistemare le sedie o l'impianto audio.",
+      "Organizzare la logistica e assicurarmi che tutto fili liscio.",
+      "Aiutare praticamente ad accelerare le cose."
+    ],
+    bocca: [
+      "Avvio una conversazione calda e sicura.",
+      "Condivido la mia storia per aiutarlo/a a immedesimarsi.",
+      "Lo/la incoraggio con la Scrittura o con un consiglio.",
+      "Prego con coraggio e guido la preghiera.",
+      "Accoglienza/ospitalità.",
+      "Insegnare, guidare o parlare.",
+      "Insegniamo o diciamo la verità per aiutare.",
+      "Voglio guidare lo studio biblico.",
+      "Mando un vocale o un messaggio di incoraggiamento.",
+      "Assicurarti che i nuovi arrivati si sentano i benvenuti.",
+      "Prepararti a parlare, cantare o guidare.",
+      "Tenere un discorso motivazionale prima di iniziare.",
+      "Offrire una conclusione gioiosa o saggia."
+    ],
+    orecchio: [
+      "Mi siedo con lui/lei in silenzio e ascolto.",
+      "Semplicemente ascolto e lo/la lascio elaborare.",
+      "Ascolto e prego in silenzio.",
+      "Sentiamo come si sentono le persone al riguardo.",
+      "Ascolterò chi ha bisogno di parlare durante le pause.",
+      "Lo/la chiamo o vado a trovarlo/a solo per ascoltare.",
+      "Sederti in fondo e osservare dove le persone hanno bisogno di aiuto.",
+      "Connettermi uno-a-uno con i timidi o i feriti.",
+      "Restare a parlare con chi ne ha bisogno."
+    ],
+    piede: [
+      "Lo/la presento agli altri e lo/la includo.",
+      "Lo/la aiuto a fare un piano o a passare all'azione.",
+      "Faccio una metania ogni volta che posso.",
+      "Andiamo a fare qualcosa al riguardo.",
+      "Vado a invitare chi non pensava di venire.",
+      "Raduno altri per andare a trovarlo/a o aiutarlo/a.",
+      "Uscire a salutare i ritardatari o invitare i passanti.",
+      "Guidare l'uscita/evangelizzazione o andare a parlare con le persone.",
+      "Passare a controllare gli altri team e offrire aiuto."
+    ],
+    cuore: [
+      "Prego per lui/lei in silenzio da lontano.",
+      "Prego con lui/lei subito.",
+      "Mi emoziono o mi sento profondamente connesso/a ai bisogni degli altri.",
+      "Preghiera.",
+      "Preghiamo prima.",
+      "Pregherò in silenzio per tutti durante il ritiro.",
+      "Prego subito per la sua guarigione.",
+      "Trovare un angolo tranquillo per pregare per chi partecipa.",
+      "Pregare perché la presenza di Dio riempia la giornata.",
+      "Pregare in silenzio per pace e pazienza."
+    ],
+    occhio: [
+      "Osservo da lontano e percepisco che c'è qualcosa di più profondo.",
+      "Colgo i suoi sentimenti senza molte parole.",
+      "Resto spiritualmente vigile su ciò che sta accadendo.",
+      "Capiremo cosa sta davvero succedendo.",
+      "Resto in fondo a osservare cosa sta accadendo.",
+      "Osservo in silenzio per capire quali bisogni pratici ha davvero.",
+      "Discernere di cosa hanno bisogno le persone anche se non lo dicono.",
+      "Osservare per capire perché si verificano i ritardi."
+    ]
+  };
 
   const TIE_BREAK = ["mano","bocca","orecchio","piede","cuore","occhio"];
 
@@ -541,7 +548,9 @@
       document.body.classList.remove('mobile-actions-shown');
     }catch(e){}
     const Q = getQuestions();
-    const A = getAnswers();
+    const answerBank = getAnswerBank();
+    const categories = Object.keys(answerBank);
+    const usage = Object.fromEntries(categories.map(cat => [cat, 0]));
     Q.forEach((qText, idx) => {
       const card = document.createElement("section");
       card.className = "card-q" + (idx===0 ? "" : " hidden");
@@ -569,7 +578,20 @@
       optsWrap.className = "options-list";
 
       const name = `q${idx+1}`;
-      const options = shuffle([...A]).slice(0, 5);
+      const categoriesForCard = categories
+        .slice()
+        .sort((a,b) => {
+          const diff = usage[a] - usage[b];
+          return diff !== 0 ? diff : (Math.random() - 0.5);
+        })
+        .slice(0, Math.min(5, categories.length));
+      categoriesForCard.forEach(cat => usage[cat]++);
+      const options = shuffle(categoriesForCard.map(cat => {
+        const variants = Array.isArray(answerBank[cat]) ? answerBank[cat] : [];
+        const fallback = (getCategories()[cat]?.label) || cat;
+        const text = variants.length ? variants[Math.floor(Math.random() * variants.length)] : fallback;
+        return { cat, text };
+      }));
       options.forEach((opt, oi) => {
         const id = `${name}-opt${oi+1}`;
         const label = document.createElement("label");
