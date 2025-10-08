@@ -597,10 +597,14 @@
   }
 
   function revealNext(currentIdx){
+    const current = document.querySelector(`.card-q[data-index="${currentIdx}"]`);
     const next = document.querySelector(`.card-q[data-index="${currentIdx+1}"]`);
-    if(next && next.classList.contains("hidden")){
-      next.classList.remove("hidden");
-      next.querySelectorAll('input[type="radio"]').forEach(r => r.required = true);
+    if(next){
+      current?.classList.add("hidden"); // mostra solo la card appena raggiunta
+      if(next.classList.contains("hidden")){
+        next.classList.remove("hidden");
+        next.querySelectorAll('input[type="radio"]').forEach(r => r.required = true);
+      }
       next.scrollIntoView({behavior:"smooth", block:"start"});
     }else if(!next){
       const actions = document.querySelector(".actions");
