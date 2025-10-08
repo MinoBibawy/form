@@ -228,13 +228,13 @@
   const QUESTION_OPTIONS_IT = [
     [
       { cat:'mano', text:"Mi offro di sistemare le sedie e creare un posto accogliente accanto a lui." },
-      { cat:'bocca', text:"Gli rivolgo la parola e lo coinvolgo in una conversazione calda." },
+      { cat:'bocca', text:"Gli rivolgo la parola e lo coinvolgo in una conversazione." },
       { cat:'orecchio', text:"Mi siedo vicino e ascolto se desidera raccontare qualcosa." },
       { cat:'piede', text:"Lo accompagno a conoscere qualcun altro del gruppo." },
-      { cat:'cuore', text:"Prego per lui e con gentilezza gli chiedo come sta." }
+      { cat:'cuore', text:"Prego per lui e gli chiedo con gentilezza come sta." }
     ],
     [
-      { cat:'bocca', text:"Condivido un consiglio incoraggiante e passi biblici utili." },
+      { cat:'bocca', text:"Condivido un consiglio incoraggiante e qualche passo biblico utile." },
       { cat:'orecchio', text:"Lo ascolto senza interrompere finche' non si sente compreso." },
       { cat:'cuore', text:"Mi offro di pregare con lui per pace e chiarezza." },
       { cat:'occhio', text:"Analizzo con lui pro e contro per capire cosa c'e' sotto." },
@@ -245,10 +245,10 @@
       { cat:'bocca', text:"Guido la preghiera a voce alta con entusiasmo." },
       { cat:'orecchio', text:"Ascolto attentamente gli altri e confermo cio' che condividono." },
       { cat:'occhio', text:"Discerno quale direzione spirituale seguire." },
-      { cat:'piede', text:"Propongo di uscire poi a servire concretamente chi ha bisogno." }
+      { cat:'piede', text:"Propongo di andare a servire concretamente chi ha bisogno." }
     ],
     [
-      { cat:'mano', text:"Mi offro per la logistica e i dettagli pratici." },
+      { cat:'mano', text:"Mi occupo della logistica e dei dettagli pratici." },
       { cat:'piede', text:"Guido il team nelle attivita' fuori dalla chiesa." },
       { cat:'bocca', text:"Mi vedo a insegnare o comunicare dal palco." },
       { cat:'occhio', text:"Coordino la sicurezza osservando tutto cio' che succede." },
@@ -257,7 +257,7 @@
     [
       { cat:'bocca', text:"Condivido subito parole che motivano il gruppo." },
       { cat:'occhio', text:"Analizzo cosa manca e quali rischi vedo." },
-      { cat:'mano', text:"Preparo un piano operativo concreto." },
+      { cat:'mano', text:"Metto insieme un piano operativo concreto." },
       { cat:'piede', text:"Suggerisco di metterci in movimento al piu' presto." },
       { cat:'orecchio', text:"Propongo di ascoltare tutti prima di decidere." }
     ],
@@ -271,7 +271,7 @@
     [
       { cat:'cuore', text:"Mi metto subito in preghiera per la sua guarigione." },
       { cat:'mano', text:"Organizzo pasti e supporto pratico per la famiglia." },
-      { cat:'orecchio', text:"Lo chiamo per ascoltare e capire come si sente." },
+      { cat:'orecchio', text:"Lo chiamo per ascoltare come si sente." },
       { cat:'piede', text:"Raccolgo altre persone per andare a trovarlo." },
       { cat:'bocca', text:"Gli invio parole di incoraggiamento e speranza." }
     ],
@@ -301,37 +301,37 @@
   const QUESTION_OPTIONS_AR = [
     [
       { cat:'mano', text:"أرتب المقاعد وأهيئ مكانًا مرحبًا بجانبه." },
-      { cat:'bocca', text:"أبدأ الحديث معه وأشجعه بكلمات دافئة." },
+      { cat:'bocca', text:"أبدأ حديثًا وأدخله في الحوار." },
       { cat:'orecchio', text:"أجلس بجانبه وأصغي إن أراد أن يشارك شيئًا." },
       { cat:'piede', text:"أصطحبه ليتعرّف على أشخاص آخرين." },
       { cat:'cuore', text:"أصلي لأجله وأسأله بلطف عن حاله." }
     ],
     [
-      { cat:'bocca', text:"أشاركه نصيحة مشجعة ومقاطع كتابية مناسبة." },
+      { cat:'bocca', text:"أشاركه نصائح مشجعة وآيات مناسبة." },
       { cat:'orecchio', text:"أتركه يتكلم حتى يشعر أنه مسموع." },
-      { cat:'cuore', text:"أقترح أن نصلي معًا من أجل السلام والوضوح." },
-      { cat:'occhio', text:"نحلّل الإيجابيات والسلبيات لنفهم ما يحدث." },
-      { cat:'mano', text:"أساعده على ترتيب الخطوات العملية للقرار." }
+      { cat:'cuore', text:"أقترح أن نصلي معًا لأجل السلام والوضوح." },
+      { cat:'occhio', text:"نحلل الإيجابيات والسلبيات لنفهم ما يجري." },
+      { cat:'mano', text:"أساعده على ترتيب الخطوات العملية التالية." }
     ],
     [
       { cat:'cuore', text:"أتشفع مطولًا من أجل احتياجات المجموعة." },
       { cat:'bocca', text:"أقود الصلاة بصوت واضح وحماس." },
-      { cat:'orecchio', text:"أصغي للآخرين وأدعم ما يشاركون به." },
+      { cat:'orecchio', text:"أصغي للآخرين وأؤكد ما يشاركون به." },
       { cat:'occhio', text:"أميّز الاتجاه الروحي الذي ينبغي اتباعه." },
-      { cat:'piede', text:"أقترح خدمة عملية بعد وقت الصلاة مباشرة." }
+      { cat:'piede', text:"أقترح خدمة عملية بعد الاجتماع مباشرة." }
     ],
     [
       { cat:'mano', text:"أتطوع للاهتمام باللوجستيات والتفاصيل." },
       { cat:'piede', text:"أقود الفريق في الأنشطة خارج الكنيسة." },
       { cat:'bocca', text:"أرى نفسي أعلّم أو أتحدث أمام الجميع." },
-      { cat:'occhio', text:"أراقب ما يجري وأحافظ على التنظيم الجيد." },
+      { cat:'occhio', text:"أراقب ما يحدث وأحافظ على التنظيم." },
       { cat:'cuore', text:"أعتني بالناس الذين يأتون مجروحين ومتعبين." }
     ],
     [
-      { cat:'bocca', text:"أشارك كلمات تحفّز المجموعة فورًا." },
+      { cat:'bocca', text:"أشارك كلمات تشجع الفريق فورًا." },
       { cat:'occhio', text:"أفحص ما ينقصنا والمخاطر المحتملة." },
-      { cat:'mano', text:"أعرض أن أضع خطة تنفيذية واضحة." },
-      { cat:'piede', text:"أشجعنا على أن نتحرك بأسرع وقت." },
+      { cat:'mano', text:"أضع خطة تنفيذية واضحة." },
+      { cat:'piede', text:"أشجعنا على التحرك سريعًا." },
       { cat:'orecchio', text:"أقترح أن نستمع للجميع قبل اتخاذ القرار." }
     ],
     [
@@ -342,9 +342,9 @@
       { cat:'occhio', text:"أتابع البرنامج لأضمن توازنه." }
     ],
     [
-      { cat:'cuore', text:"أبدأ الصلاة فورًا من أجل شفائه." },
+      { cat:'cuore', text:"أبدأ الصلاة فورًا لأجل شفائه." },
       { cat:'mano', text:"أنظم وجبات ودعمًا عمليًا للعائلة." },
-      { cat:'orecchio', text:"أتصل به لأسمع كيف يشعر." },
+      { cat:'orecchio', text:"أتصل به لأصغي لما يشعر به." },
       { cat:'piede', text:"أجمع آخرين لزيارته في أقرب وقت." },
       { cat:'bocca', text:"أرسل له كلمات تشجيع ورجاء." }
     ],
@@ -358,7 +358,7 @@
     [
       { cat:'mano', text:"أنظم المواد والجدول الزمني لليوم." },
       { cat:'piede', text:"أقود الفرق الميدانية في الخدمة." },
-      { cat:'bocca', text:"أحمّس الشباب بقصص وشهادات." },
+      { cat:'bocca', text:"أحمّس الشباب بشهادات وقصص." },
       { cat:'cuore', text:"أهتم بمن يتعب وأوفر له الراحة." },
       { cat:'occhio', text:"أراقب السلامة واحتياجات الناس خلال الحدث." }
     ],
@@ -366,7 +366,7 @@
       { cat:'occhio', text:"ألاحظ سبب التأخير لأتوقع المشكلات." },
       { cat:'cuore', text:"أصلي كي يبقى الجميع هادئين وصبورين." },
       { cat:'piede', text:"أتحرك لمساعدة من يحتاج لتسريع الأمور." },
-      { cat:'mano', text:"أرتب التفاصيل العملية كي نعود للعمل بسرعة." },
+      { cat:'mano', text:"أرتب التفاصيل العملية لنستأنف سريعًا." },
       { cat:'orecchio', text:"أستمع لمن ينزعج لأهدئه بكلمات مطمئنة." }
     ]
   ];
@@ -532,6 +532,7 @@
     }catch(e){}
     const Q = getQuestions();
     const optionsByQuestion = getQuestionOptions();
+    const fallbackCategories = getCategories();
     Q.forEach((qText, idx) => {
       const card = document.createElement("section");
       card.className = "card-q" + (idx===0 ? "" : " hidden");
@@ -559,7 +560,13 @@
       optsWrap.className = "options-list";
 
       const name = `q${idx+1}`;
-      const options = Array.isArray(optionsByQuestion[idx]) ? optionsByQuestion[idx] : [];
+      const specificOptions = Array.isArray(optionsByQuestion[idx]) ? optionsByQuestion[idx] : [];
+      const options = specificOptions.length
+        ? specificOptions
+        : Object.keys(fallbackCategories).map(cat => ({
+            cat,
+            text: fallbackCategories[cat]?.label || cat
+          }));
       options.forEach((opt, oi) => {
         const id = `${name}-opt${oi+1}`;
         const label = document.createElement("label");
