@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Scopri il tuo dono</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card" role="application" aria-labelledby="title">
+    <header>
+      <h1 id="title">Scopri il tuo dono</h1>
+      <button type="button" class="ghost" id="langToggle" aria-label="Cambia lingua">AR</button>
+    </header>
+
+    <main>
+      <form id="quiz" novalidate></form>
+
+      <div class="actions actions-center">
+        <button type="button" class="primary" id="submitBtn" aria-describedby="error">Scopri il risultato</button>
+      </div>
+      <p class="error" id="error">Per favore rispondi a tutte le situazioni.</p>
+
+      <section class="result" id="result" aria-live="polite"></section>
+    </main>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
