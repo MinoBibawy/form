@@ -225,85 +225,151 @@
     '⏳ الخدمة تأخرت. تميل إلى أن...',
   ];
 
-  const ANSWERS_AR = [
-    // MANO
-    { cat:'mano', text:'أفكر في كيفية تنظيم الحدث وأعرض المساعدة.' },
-    { cat:'mano', text:'أفكر في من سيحتاج إلى مساعدة بعد الصلاة.' },
-    { cat:'mano', text:'فريق المشتريات.' },
-    { cat:'mano', text:'التقنية أو الإعلام.' },
-    { cat:'mano', text:'فريق التركيب/الفك والتنظيف.' },
-    { cat:'mano', text:'لنحلّ المشكلة فوراً.' },
-    { cat:'mano', text:'سأساعد في المطبخ أو التنظيف — أي شيء يلزم.' },
-    { cat:'mano', text:'أحضر طعاماً أو أقوم بالمشاوير اللازمة.' },
-    { cat:'mano', text:'أساعد في ترتيب الكراسي أو نظام الصوت.' },
-    { cat:'mano', text:'أنظّم الأمور اللوجستية وأتأكد أن كل شيء يسير بسلاسة.' },
-    { cat:'mano', text:'أساعد عملياً لتسريع الأمور.' },
-
-    // BOCCA
-    { cat:'bocca', text:'أبدأ محادثة ودّية وآمنة.' },
-    { cat:'bocca', text:'أشارك قصتي لمساعدته/ها على التفاعل.' },
-    { cat:'bocca', text:'أشجّعه/ها بكلمة من الكتاب أو بنصيحة.' },
-    { cat:'bocca', text:'أصلّي بشجاعة وأقود الصلاة.' },
-    { cat:'bocca', text:'الاستقبال/الضيافة.' },
-    { cat:'bocca', text:'التعليم أو القيادة أو التحدّث.' },
-    { cat:'bocca', text:'نعلّم أو نقول الحقيقة لمساعدة الآخرين.' },
-    { cat:'bocca', text:'أريد قيادة درس الكتاب.' },
-    { cat:'bocca', text:'أرسل رسالة صوتية أو نصية للتشجيع.' },
-    { cat:'bocca', text:'أتأكد أن القادمين الجدد يشعرون بالترحيب.' },
-    { cat:'bocca', text:'أستعد للكلام أو الترنيم أو القيادة.' },
-    { cat:'bocca', text:'إلقاء كلمة تحفيزية قبل البدء.' },
-    { cat:'bocca', text:'أقدّم خاتمة مفرِحة أو حكيمة.' },
-
-    // ORECCHIO
-    { cat:'orecchio', text:'أجلس معه/معها بصمت وأستمع.' },
-    { cat:'orecchio', text:'أستمع فقط وأتركه/أتركها يعبّر/تعبّر.' },
-    { cat:'orecchio', text:'أستمع وأصلّي بصمت.' },
-    { cat:'orecchio', text:'دعونا نسمع كيف يشعر الناس تجاه ذلك.' },
-    { cat:'orecchio', text:'سأستمع لمن يحتاج للكلام خلال الاستراحات.' },
-    { cat:'orecchio', text:'أتصل به/بها أو أزوره/أزورها فقط للاستماع.' },
-    { cat:'orecchio', text:'أجلس في الخلف وألاحظ أين يحتاج الناس إلى مساعدة.' },
-    { cat:'orecchio', text:'أتواصل بشكل فردي مع الخجولين أو المجروحين.' },
-    { cat:'orecchio', text:'أبقى لأتحدث مع من يحتاج ذلك.' },
-
-    // PIEDE
-    { cat:'piede', text:'أعرّفه/أعرّفها على الآخرين وأضمّه/أضمّها للمجموعة.' },
-    { cat:'piede', text:'أساعده/أساعدها على وضع خطة أو البدء بالفعل.' },
-    { cat:'piede', text:'أقوم بميتانيا كلما استطعت.' },
-    { cat:'piede', text:'لنذهب لنعمل شيئاً حيال ذلك.' },
-    { cat:'piede', text:'أذهب لدعوة من لم يكن ينوي الحضور.' },
-    { cat:'piede', text:'أجمع آخرين لزيارته/ها أو لمساعدته/ها.' },
-    { cat:'piede', text:'أخرج لتحية المتأخرين أو دعوة المارّين.' },
-    { cat:'piede', text:'أقود الخروج/الكرازة أو أذهب للحديث مع الناس.' },
-    { cat:'piede', text:'أمرّ على الفرق الأخرى وأعرض المساعدة.' },
-
-    // CUORE
-    { cat:'cuore', text:'أصلّي له/لها بصمت من بعيد.' },
-    { cat:'cuore', text:'أصلّي معه/معها فوراً.' },
-    { cat:'cuore', text:'أتأثر أو أشعر بالاتصال العميق باحتياجات الآخرين.' },
-    { cat:'cuore', text:'الصلاة.' },
-    { cat:'cuore', text:'لنُصلِّ أولاً.' },
-    { cat:'cuore', text:'سأصلّي بصمت للجميع خلال الخلوة.' },
-    { cat:'cuore', text:'أصلّي فوراً لأجل شفائه/شفائها.' },
-    { cat:'cuore', text:'أجد ركناً هادئاً للصلاة من أجل المشاركين.' },
-    { cat:'cuore', text:'أصلّي لكي يملأ حضور الله اليوم.' },
-    { cat:'cuore', text:'أصلّي بصمت من أجل السلام والصبر.' },
-
-    // OCCHIO
-    { cat:'occhio', text:'أراقب من بعيد وأشعر أن هناك أمراً أعمق.' },
-    { cat:'occhio', text:'ألتقط مشاعره/مشاعرها دون كلمات كثيرة.' },
-    { cat:'occhio', text:'أبقى يقظاً روحياً لما يحدث.' },
-    { cat:'occhio', text:'سوف نفهم ما الذي يحدث فعلاً.' },
-    { cat:'occhio', text:'أبقى في الخلف لأراقب ما يجري.' },
-    { cat:'occhio', text:'أراقب بصمت لأفهم ما هي الاحتياجات العملية الحقيقية.' },
-    { cat:'occhio', text:'أميّز ما يحتاجه الناس حتى إن لم يقولوا ذلك.' },
-    { cat:'occhio', text:'أراقب لأفهم سبب حدوث التأخيرات.' },
+  const QUESTION_OPTIONS_IT = [
+    [
+      { cat:'mano', text:"Mi offro di sistemare le sedie e creare un posto accogliente accanto a lui." },
+      { cat:'bocca', text:"Gli rivolgo la parola e lo coinvolgo in una conversazione calda." },
+      { cat:'orecchio', text:"Mi siedo vicino e ascolto se desidera raccontare qualcosa." },
+      { cat:'piede', text:"Lo accompagno a conoscere qualcun altro del gruppo." },
+      { cat:'cuore', text:"Prego per lui e con gentilezza gli chiedo come sta." }
+    ],
+    [
+      { cat:'bocca', text:"Condivido un consiglio incoraggiante e passi biblici utili." },
+      { cat:'orecchio', text:"Lo ascolto senza interrompere finche' non si sente compreso." },
+      { cat:'cuore', text:"Mi offro di pregare con lui per pace e chiarezza." },
+      { cat:'occhio', text:"Analizzo con lui pro e contro per capire cosa c'e' sotto." },
+      { cat:'mano', text:"Lo aiuto a fissare i prossimi passi pratici della scelta." }
+    ],
+    [
+      { cat:'cuore', text:"Intercedo a lungo per i bisogni del gruppo." },
+      { cat:'bocca', text:"Guido la preghiera a voce alta con entusiasmo." },
+      { cat:'orecchio', text:"Ascolto attentamente gli altri e confermo cio' che condividono." },
+      { cat:'occhio', text:"Discerno quale direzione spirituale seguire." },
+      { cat:'piede', text:"Propongo di uscire poi a servire concretamente chi ha bisogno." }
+    ],
+    [
+      { cat:'mano', text:"Mi offro per la logistica e i dettagli pratici." },
+      { cat:'piede', text:"Guido il team nelle attivita' fuori dalla chiesa." },
+      { cat:'bocca', text:"Mi vedo a insegnare o comunicare dal palco." },
+      { cat:'occhio', text:"Coordino la sicurezza osservando tutto cio' che succede." },
+      { cat:'cuore', text:"Accolgo e mi prendo cura delle persone ferite." }
+    ],
+    [
+      { cat:'bocca', text:"Condivido subito parole che motivano il gruppo." },
+      { cat:'occhio', text:"Analizzo cosa manca e quali rischi vedo." },
+      { cat:'mano', text:"Preparo un piano operativo concreto." },
+      { cat:'piede', text:"Suggerisco di metterci in movimento al piu' presto." },
+      { cat:'orecchio', text:"Propongo di ascoltare tutti prima di decidere." }
+    ],
+    [
+      { cat:'piede', text:"Mi offro di guidare un'uscita missionaria durante il ritiro." },
+      { cat:'mano', text:"Allestisco gli spazi e mi occupo della logistica." },
+      { cat:'cuore', text:"Creo un angolo di preghiera e ascolto per chi ne ha bisogno." },
+      { cat:'bocca', text:"Guido uno dei momenti di insegnamento." },
+      { cat:'occhio', text:"Supervisiono il programma assicurandomi che resti equilibrato." }
+    ],
+    [
+      { cat:'cuore', text:"Mi metto subito in preghiera per la sua guarigione." },
+      { cat:'mano', text:"Organizzo pasti e supporto pratico per la famiglia." },
+      { cat:'orecchio', text:"Lo chiamo per ascoltare e capire come si sente." },
+      { cat:'piede', text:"Raccolgo altre persone per andare a trovarlo." },
+      { cat:'bocca', text:"Gli invio parole di incoraggiamento e speranza." }
+    ],
+    [
+      { cat:'piede', text:"Accolgo fuori chi arriva in ritardo e lo accompagno dentro." },
+      { cat:'bocca', text:"Guido il canto o apro la funzione parlando alla comunita'." },
+      { cat:'occhio', text:"Osservo chi ha bisogno di aiuto e segnalo eventuali problemi." },
+      { cat:'mano', text:"Controllo che tutta la tecnica funzioni correttamente." },
+      { cat:'cuore', text:"Resto a pregare perche' l'incontro tocchi i cuori." }
+    ],
+    [
+      { cat:'mano', text:"Organizzo materiali e cronoprogramma della giornata." },
+      { cat:'piede', text:"Guido le squadre sul territorio." },
+      { cat:'bocca', text:"Motivo i giovani raccontando testimonianze." },
+      { cat:'cuore', text:"Creo momenti di cura per chi e' affaticato." },
+      { cat:'occhio', text:"Valuto sicurezza e bisogni emergenti durante l'evento." }
+    ],
+    [
+      { cat:'occhio', text:"Osservo che cosa sta causando il ritardo per anticipare i problemi." },
+      { cat:'cuore', text:"Prego perche' tutti restino sereni e pazienti." },
+      { cat:'piede', text:"Mi muovo per aiutare dove serve accelerare." },
+      { cat:'mano', text:"Sistemo i dettagli pratici per ripartire rapidamente." },
+      { cat:'orecchio', text:"Ascolto chi e' frustrato e lo rassicuro con calma." }
+    ]
   ];
 
-  const ANSWER_BANK_AR = ANSWERS_AR.reduce((acc, item) => {
-    if(!acc[item.cat]) acc[item.cat] = [];
-    acc[item.cat].push(item.text);
-    return acc;
-  }, { mano: [], bocca: [], orecchio: [], piede: [], cuore: [], occhio: [] });
+  const QUESTION_OPTIONS_AR = [
+    [
+      { cat:'mano', text:"أرتب المقاعد وأهيئ مكانًا مرحبًا بجانبه." },
+      { cat:'bocca', text:"أبدأ الحديث معه وأشجعه بكلمات دافئة." },
+      { cat:'orecchio', text:"أجلس بجانبه وأصغي إن أراد أن يشارك شيئًا." },
+      { cat:'piede', text:"أصطحبه ليتعرّف على أشخاص آخرين." },
+      { cat:'cuore', text:"أصلي لأجله وأسأله بلطف عن حاله." }
+    ],
+    [
+      { cat:'bocca', text:"أشاركه نصيحة مشجعة ومقاطع كتابية مناسبة." },
+      { cat:'orecchio', text:"أتركه يتكلم حتى يشعر أنه مسموع." },
+      { cat:'cuore', text:"أقترح أن نصلي معًا من أجل السلام والوضوح." },
+      { cat:'occhio', text:"نحلّل الإيجابيات والسلبيات لنفهم ما يحدث." },
+      { cat:'mano', text:"أساعده على ترتيب الخطوات العملية للقرار." }
+    ],
+    [
+      { cat:'cuore', text:"أتشفع مطولًا من أجل احتياجات المجموعة." },
+      { cat:'bocca', text:"أقود الصلاة بصوت واضح وحماس." },
+      { cat:'orecchio', text:"أصغي للآخرين وأدعم ما يشاركون به." },
+      { cat:'occhio', text:"أميّز الاتجاه الروحي الذي ينبغي اتباعه." },
+      { cat:'piede', text:"أقترح خدمة عملية بعد وقت الصلاة مباشرة." }
+    ],
+    [
+      { cat:'mano', text:"أتطوع للاهتمام باللوجستيات والتفاصيل." },
+      { cat:'piede', text:"أقود الفريق في الأنشطة خارج الكنيسة." },
+      { cat:'bocca', text:"أرى نفسي أعلّم أو أتحدث أمام الجميع." },
+      { cat:'occhio', text:"أراقب ما يجري وأحافظ على التنظيم الجيد." },
+      { cat:'cuore', text:"أعتني بالناس الذين يأتون مجروحين ومتعبين." }
+    ],
+    [
+      { cat:'bocca', text:"أشارك كلمات تحفّز المجموعة فورًا." },
+      { cat:'occhio', text:"أفحص ما ينقصنا والمخاطر المحتملة." },
+      { cat:'mano', text:"أعرض أن أضع خطة تنفيذية واضحة." },
+      { cat:'piede', text:"أشجعنا على أن نتحرك بأسرع وقت." },
+      { cat:'orecchio', text:"أقترح أن نستمع للجميع قبل اتخاذ القرار." }
+    ],
+    [
+      { cat:'piede', text:"أتطوع لقيادة خروج تبشيري أثناء الخلوة." },
+      { cat:'mano', text:"أجهز القاعات وأهتم باللوازم." },
+      { cat:'cuore', text:"أعد ركنًا للصلاة والإصغاء لمن يحتاج." },
+      { cat:'bocca', text:"أقود أحد أوقات التعليم." },
+      { cat:'occhio', text:"أتابع البرنامج لأضمن توازنه." }
+    ],
+    [
+      { cat:'cuore', text:"أبدأ الصلاة فورًا من أجل شفائه." },
+      { cat:'mano', text:"أنظم وجبات ودعمًا عمليًا للعائلة." },
+      { cat:'orecchio', text:"أتصل به لأسمع كيف يشعر." },
+      { cat:'piede', text:"أجمع آخرين لزيارته في أقرب وقت." },
+      { cat:'bocca', text:"أرسل له كلمات تشجيع ورجاء." }
+    ],
+    [
+      { cat:'piede', text:"أستقبل المتأخرين وأرافقهم إلى أماكنهم." },
+      { cat:'bocca', text:"أقود الترنيم أو أفتتح اللقاء بكلمة." },
+      { cat:'occhio', text:"أراقب من يحتاج إلى مساعدة وأبلغ الفريق." },
+      { cat:'mano', text:"أتأكد أن المعدات والصوت يعملان جيدًا." },
+      { cat:'cuore', text:"أبقى أصلي كي يكون الاجتماع مؤثرًا." }
+    ],
+    [
+      { cat:'mano', text:"أنظم المواد والجدول الزمني لليوم." },
+      { cat:'piede', text:"أقود الفرق الميدانية في الخدمة." },
+      { cat:'bocca', text:"أحمّس الشباب بقصص وشهادات." },
+      { cat:'cuore', text:"أهتم بمن يتعب وأوفر له الراحة." },
+      { cat:'occhio', text:"أراقب السلامة واحتياجات الناس خلال الحدث." }
+    ],
+    [
+      { cat:'occhio', text:"ألاحظ سبب التأخير لأتوقع المشكلات." },
+      { cat:'cuore', text:"أصلي كي يبقى الجميع هادئين وصبورين." },
+      { cat:'piede', text:"أتحرك لمساعدة من يحتاج لتسريع الأمور." },
+      { cat:'mano', text:"أرتب التفاصيل العملية كي نعود للعمل بسرعة." },
+      { cat:'orecchio', text:"أستمع لمن ينزعج لأهدئه بكلمات مطمئنة." }
+    ]
+  ];
 
   const RESULT_CONTENT_AR = {
     bocca: `
@@ -409,7 +475,7 @@
   function t(key){ return (CURRENT_LANG === 'ar' ? UI_AR : UI_IT)[key] || ''; }
   function getCategories(){ return CURRENT_LANG === 'ar' ? CATEGORIES_AR : CATEGORIES; }
   function getQuestions(){ return CURRENT_LANG === 'ar' ? QUESTIONS_AR_EMOJI : QUESTIONS_IT_EMOJI; }
-  function getAnswerBank(){ return CURRENT_LANG === 'ar' ? ANSWER_BANK_AR : ANSWER_BANK; }
+  function getQuestionOptions(){ return CURRENT_LANG === 'ar' ? QUESTION_OPTIONS_AR : QUESTION_OPTIONS_IT; }
   function getResultContent(){ return CURRENT_LANG === 'ar' ? RESULT_CONTENT_AR : RESULT_CONTENT; }
   function applyStaticTexts(){
     const titleEl = document.getElementById('title');
@@ -452,90 +518,7 @@
     attachHandlers();
   }
 
-  const ANSWER_BANK = {
-    mano: [
-      "Penso a come è stato organizzato l'evento e mi offro di aiutare.",
-      "Penso a chi avrà bisogno di aiuto dopo la preghiera.",
-      "Team acquisti.",
-      "Tecnico o media.",
-      "Squadra montaggio/smontaggio e pulizie.",
-      "Risolviamolo subito.",
-      "Aiuterò con cucina o pulizie - qualunque cosa serva.",
-      "Porto del cibo o mi offro per commissioni.",
-      "Aiutare a sistemare le sedie o l'impianto audio.",
-      "Organizzare la logistica e assicurarmi che tutto fili liscio.",
-      "Aiutare praticamente ad accelerare le cose."
-    ],
-    bocca: [
-      "Avvio una conversazione calda e sicura.",
-      "Condivido la mia storia per aiutarlo/a a immedesimarsi.",
-      "Lo/la incoraggio con la Scrittura o con un consiglio.",
-      "Prego con coraggio e guido la preghiera.",
-      "Accoglienza/ospitalità.",
-      "Insegnare, guidare o parlare.",
-      "Insegniamo o diciamo la verità per aiutare.",
-      "Voglio guidare lo studio biblico.",
-      "Mando un vocale o un messaggio di incoraggiamento.",
-      "Assicurarti che i nuovi arrivati si sentano i benvenuti.",
-      "Prepararti a parlare, cantare o guidare.",
-      "Tenere un discorso motivazionale prima di iniziare.",
-      "Offrire una conclusione gioiosa o saggia."
-    ],
-    orecchio: [
-      "Mi siedo con lui/lei in silenzio e ascolto.",
-      "Semplicemente ascolto e lo/la lascio elaborare.",
-      "Ascolto e prego in silenzio.",
-      "Sentiamo come si sentono le persone al riguardo.",
-      "Ascolterò chi ha bisogno di parlare durante le pause.",
-      "Lo/la chiamo o vado a trovarlo/a solo per ascoltare.",
-      "Sederti in fondo e osservare dove le persone hanno bisogno di aiuto.",
-      "Connettermi uno-a-uno con i timidi o i feriti.",
-      "Restare a parlare con chi ne ha bisogno."
-    ],
-    piede: [
-      "Lo/la presento agli altri e lo/la includo.",
-      "Lo/la aiuto a fare un piano o a passare all'azione.",
-      "Faccio una metania ogni volta che posso.",
-      "Andiamo a fare qualcosa al riguardo.",
-      "Vado a invitare chi non pensava di venire.",
-      "Raduno altri per andare a trovarlo/a o aiutarlo/a.",
-      "Uscire a salutare i ritardatari o invitare i passanti.",
-      "Guidare l'uscita/evangelizzazione o andare a parlare con le persone.",
-      "Passare a controllare gli altri team e offrire aiuto."
-    ],
-    cuore: [
-      "Prego per lui/lei in silenzio da lontano.",
-      "Prego con lui/lei subito.",
-      "Mi emoziono o mi sento profondamente connesso/a ai bisogni degli altri.",
-      "Preghiera.",
-      "Preghiamo prima.",
-      "Pregherò in silenzio per tutti durante il ritiro.",
-      "Prego subito per la sua guarigione.",
-      "Trovare un angolo tranquillo per pregare per chi partecipa.",
-      "Pregare perché la presenza di Dio riempia la giornata.",
-      "Pregare in silenzio per pace e pazienza."
-    ],
-    occhio: [
-      "Osservo da lontano e percepisco che c'è qualcosa di più profondo.",
-      "Colgo i suoi sentimenti senza molte parole.",
-      "Resto spiritualmente vigile su ciò che sta accadendo.",
-      "Capiremo cosa sta davvero succedendo.",
-      "Resto in fondo a osservare cosa sta accadendo.",
-      "Osservo in silenzio per capire quali bisogni pratici ha davvero.",
-      "Discernere di cosa hanno bisogno le persone anche se non lo dicono.",
-      "Osservare per capire perché si verificano i ritardi."
-    ]
-  };
-
   const TIE_BREAK = ["mano","bocca","orecchio","piede","cuore","occhio"];
-
-  function shuffle(arr){
-    for(let i=arr.length-1;i>0;i--){
-      const j = Math.floor(Math.random()*(i+1));
-      [arr[i],arr[j]] = [arr[j],arr[i]];
-    }
-    return arr;
-  }
 
   function buildCards(){
     const container = document.getElementById("quiz");
@@ -548,9 +531,7 @@
       document.body.classList.remove('mobile-actions-shown');
     }catch(e){}
     const Q = getQuestions();
-    const answerBank = getAnswerBank();
-    const categories = Object.keys(answerBank);
-    const usage = Object.fromEntries(categories.map(cat => [cat, 0]));
+    const optionsByQuestion = getQuestionOptions();
     Q.forEach((qText, idx) => {
       const card = document.createElement("section");
       card.className = "card-q" + (idx===0 ? "" : " hidden");
@@ -578,20 +559,7 @@
       optsWrap.className = "options-list";
 
       const name = `q${idx+1}`;
-      const categoriesForCard = categories
-        .slice()
-        .sort((a,b) => {
-          const diff = usage[a] - usage[b];
-          return diff !== 0 ? diff : (Math.random() - 0.5);
-        })
-        .slice(0, Math.min(5, categories.length));
-      categoriesForCard.forEach(cat => usage[cat]++);
-      const options = shuffle(categoriesForCard.map(cat => {
-        const variants = Array.isArray(answerBank[cat]) ? answerBank[cat] : [];
-        const fallback = (getCategories()[cat]?.label) || cat;
-        const text = variants.length ? variants[Math.floor(Math.random() * variants.length)] : fallback;
-        return { cat, text };
-      }));
+      const options = Array.isArray(optionsByQuestion[idx]) ? optionsByQuestion[idx] : [];
       options.forEach((opt, oi) => {
         const id = `${name}-opt${oi+1}`;
         const label = document.createElement("label");
